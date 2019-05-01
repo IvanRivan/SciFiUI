@@ -7,6 +7,8 @@ public class UI extends PApplet
     Button b;
     MovingCircle mc;
     CenterCircle centerc;
+    SemiCircle topSc;
+    SemiCircle botSc;
 
     boolean[] keys = new boolean[1024];
 
@@ -33,15 +35,10 @@ public class UI extends PApplet
 
     public void setup()
     {
-        float centerx = width / 2;
-        float centery = height / 2;
-
         b = new Button(this, 50, 50, 100, 50, "I am a button");
-        mc = new MovingCircle(this, centerx, height * .75f, 50);
-        radar = new Radar(this, 1, centerx, centery, 100);
         centerc = new CenterCircle(this, 150, width / 2, height / 2, 199);
-        topCenter_sc = new SemiCircle(this, 180, width / 2 , height / 2, 166);
-        botCenter_sc = new SemiCircle(this, 180, width / 2, (height / 2 ) - 10, 166);
+        topSc = new SemiCircle(this, 200, width / 2 , (height / 2) - 20, 176, PI, TWO_PI);
+        botSc = new SemiCircle(this, 200, width / 2, (height / 2 ) + 20, 176, 0, PI);
     }
 
     Radar radar;
@@ -51,10 +48,10 @@ public class UI extends PApplet
         background(0);
         b.render();
 
-        mc.update();
-        mc.render();
-
         centerc.render();
+
+        topSc.render();
+        botSc.render();
 
         if (checkKey(LEFT))
         {

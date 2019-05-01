@@ -27,7 +27,7 @@ public class CenterCircle
 
         if (ui.mouseX > x-radius && ui.mouseX < x+radius && ui.mouseY > y-radius && ui.mouseY < y+radius)
         {
-            inter = PApplet.map(ui.mouseX, 0, 30, radius, expand);
+            inter = PApplet.map(ui.mouseX, 0, radius, radius, expand);
         }
         ui.stroke(outline);
         ui.strokeWeight(20);
