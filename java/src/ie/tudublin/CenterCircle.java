@@ -32,7 +32,6 @@ public class CenterCircle
         ui.stroke(outline);
         ui.strokeWeight(20);
         ui.fill(h);
-        
         ui.circle(x, y, inter); 
     }
 
