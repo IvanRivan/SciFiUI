@@ -10,6 +10,6 @@ public class CenterCircle
     private int y;
     private int fillcol;
 
-    
+    public 
 }
 
