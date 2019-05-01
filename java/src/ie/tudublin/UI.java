@@ -53,9 +53,9 @@ public class UI extends PApplet
         topSc.render();
         botSc.render();
 
-        if (checkKey(LEFT))
+        if (mousePressed == true)
         {
-            System.out.println("Left arrow key pressed");
+            centerc.update(1);
         }
     }
 }

@@ -9,6 +9,7 @@ public class CenterCircle
     private int x;
     private int y;
     private int h;
+    private int temp;
 
     public CenterCircle(UI ui, float radius, int x, int y, int h)
     {
@@ -35,6 +36,19 @@ public class CenterCircle
         ui.circle(x, y, inter); 
     }
 
+    public void update(int check)
+    {
+        this.temp = this.h;
+        if (check == 1)
+        {
+            this.h = 240;
+        }
+        else
+        {
+            this.h = this.temp;
+        }
+        
+    }
 
 }
 
