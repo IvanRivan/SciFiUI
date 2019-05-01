@@ -9,6 +9,8 @@ public class SemiCircle
     private int x;
     private int y;
     private int h;
+    private int start;
+    private int stop;
 
     public SemiCircle(UI ui, float radius, int x, int y, int h)
     {
@@ -17,23 +19,11 @@ public class SemiCircle
         this.x = x;
         this.y = y;
         this.h = h;
+        this.start = start;
+        this.stop = stop;
     }
 
-    public void render()
-    {
-        int outline = h - 40;
-        float expand = radius + 10;
-        float inter = radius;
 
-        if (ui.mouseX > x-radius && ui.mouseX < x+radius && ui.mouseY > y-radius && ui.mouseY < y+radius)
-        {
-            inter = PApplet.map(ui.mouseX, 0, 30, radius, expand);
-        }
-        ui.stroke(outline);
-        ui.strokeWeight(20);
-        ui.fill(h);
-        ui.circle(x, y, inter); 
-    }
 
 
 }

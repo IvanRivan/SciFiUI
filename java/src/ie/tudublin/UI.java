@@ -33,10 +33,15 @@ public class UI extends PApplet
 
     public void setup()
     {
+        float centerx = width / 2;
+        float centery = height / 2;
+
         b = new Button(this, 50, 50, 100, 50, "I am a button");
-        mc = new MovingCircle(this, width / 2, height * .75f, 50);
-        radar = new Radar(this, 1, width / 2, height / 2, 100);
-        centerc = new CenterCircle(this, 150, width / 2 , height / 2, 199);
+        mc = new MovingCircle(this, centerx, height * .75f, 50);
+        radar = new Radar(this, 1, centerx, centery, 100);
+        centerc = new CenterCircle(this, 150, width / 2, height / 2, 199);
+        topCenter_sc = new SemiCircle(this, 180, width / 2 , height / 2, 166);
+        botCenter_sc = new SemiCircle(this, 180, width / 2, (height / 2 ) - 10, 166);
     }
 
     Radar radar;
